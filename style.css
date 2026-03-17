@@ -1,148 +1,167 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: serif;
 }
-nav{
-    background-color: black;
-    color: white;
-    padding: 15px;
-}
-li,ul,h2{
-    display: inline;
-}
-.searchbar{
-    height: 3opx;
-    width: 98%;
-    background-color: brown;
-    padding: 15px;
-    }
-    .one{
-        color: gainsboro;
-        margin-right: 0%;
-    }
-    .tow{
-        color: gainsboro;
-    }
-    h2{
-        color: wheat;
-        margin: 30%;
-        text-align: center;
-    }
-    .Home{
-        height: 20px;
-        width: 98%;
-        background-color: darkgrey;
-        padding: 15px;
-    }
-    li:hover{
-        cursor: pointer;
-        color:blue;
-    }
-    .container{
-        position: relative;
-        display: inline-block;
-        margin: 40px;
-        padding: 15px;
-    }
-    h1{
-        position: absolute;
-        top: 10px;
-        right: 240px;
-        background: white;
-        padding: 5px;
-        font-weight: bold;
-    }
-    .row{
-         position: absolute;
-        top: 60px;
-        right: 37%;
-        background: white;
-        padding: 5px;
-        
-    }
-    .primary{
-        background-color: blue;
-        color: white;
-        font-size: 12px;
-        padding: 3px 8px;
-        border-radius: 6px;
-        width: 5px;
-    }
-    .monospaced{
-        font-size: 10px;
-        color: rgb(36, 34, 34);
-    }
-    .content{
-        position: absolute;
-        top: 90px;
-        right: 18%;
-        background: white;
-        padding: 5px;
-        font-weight: lighter;
-        font-size: 15px;
-    }
-    .rating{
-        position: absolute;
-        top: 40%;
-        right: 32%;
-        background: white;
-        padding: 5px;
-        font-weight: bold;
-        font-size: 15px;
-    }
-    .price{
-        font-size: 25px;
-        padding: 10px;
-        font-weight: bold;
-    }
-    .stars{
-        color:gray;
-        font-size: 16px;
-    }
-    .rating-box{
-     background-color: #4CAF50;
-     color:white;
-     font-size: 12px;
-     padding: 2px 6px;
-     border-radius: 4px;
 
-    }
-.line{
-    height: 1px;
-    background: #000;
-    width: 335%;
+/* TOP BAR */
+.topbar{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-weight:bold;
+}
+
+/* NAV */
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#9e2b2b;
+    color:white;
+    padding:15px 40px;
+}
+
+.nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+.nav h2{
+    color:#ffd699;
+}
+
+/* BREADCRUMB */
+.breadcrumb{
+    background:#ccc;
+    padding:10px 40px;
+}
+
+/* PRODUCT */
+.product{
+    display:flex;
+    gap:50px;
+    padding:40px;
+}
+
+/* IMAGE */
+.image img{
+    width:600px;
+}
+
+/* DETAILS */
+.details{
+    max-width:500px;
     margin: 20px;
-    position: relative;
-    top:50%;
-    right: 20%;
 }
-.shape{
-    background-color:rgb(50, 5, 5);
-     color:white;
-     font-size: 40px;
-     padding:5px 5px ;
-     border-radius: 8px;
-    
 
+.details h1{
+    font-size:28px;
+    margin-bottom:10px;
 }
- .add{
-    margin: 15px;
+
+/* TAG */
+.tag{
+    background:blue;
+    color:white;
+    padding:3px 8px;
+    border-radius:5px;
+    font-size:12px;
+}
+
+.code{
+    font-size:12px;
+    margin-left:10px;
+}
+
+/* DESCRIPTION */
+.desc{
+    margin:10px 0;
+}
+
+/* RATING */
+.rating{
+    margin:10px 0;
+}
+
+.rate-box{
+    background:green;
+    color:white;
+    padding:2px 6px;
+    border-radius:4px;
+    margin-left:5px;
+}
+
+/* PRICE */
+.price{
+    font-size:28px;
+    margin:10px 0;
+}
+
+/* BUTTON */
+.cart{
+    background:#5b0f0f;
+    color:white;
+    padding:15px;
+    border:none;
+    font-size:22px;
+    border-radius:8px;
+    width:250px;
+    cursor:pointer;
     margin-top: 20px;
-    padding: 20px;
- }
-.line-1{
-height: 1px;
-    background: #000;
-    width: 330%;
-    margin: 40px;
-    position: relative;
-    top:50%;
-    right: 20%;
-} 
-.create{
-   position: absolute;
-        top: 90%;
-        right: 32%;
-        background: white;
-    } 
-    
+}
+
+.list{
+    display:block;
+    margin-top:10px;
+    margin: 10px;
+}
+
+/* CALL */
+.call{
+    margin-top:15px;
+    color:blue;
+}
+
+/* TABS */
+.tabs{
+    margin-top:10px;
+}
+
+.tabs span{
+    margin-right:10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .product{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .image img{
+        width:100%;
+    }
+}
+
+/* TABLET */
+@media(min-width:769px) and (max-width:1024px){
+    .product{
+        flex-direction:column;
+    }
+
+    .image img{
+        width:100%;
+    }
+}
